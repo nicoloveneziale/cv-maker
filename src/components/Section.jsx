@@ -6,12 +6,9 @@ export default function Section(props) {
   const [formActive, setFormActive] = useState(false);
 
   function handleAddData() {
-    // Create a new empty array to store the form data
     const formData = [];
 
-    // Iterate through each detail in the props.detailList
     props.detailList.forEach((detail, index) => {
-      // Get the value from the corresponding input element
       const inputElement = document.querySelector(
         `input[name="${detail.label}"]`,
       );
@@ -25,19 +22,40 @@ export default function Section(props) {
       }
     });
 
-    // Update the sectionData state by combining the existing data with the new form data
     setSectionData([
       ...sectionData,
       <div key={sectionData.length + 1}>
-        {formData.map((item) => (
-          <p key={item.label}>
-            {item.label}: {item.value}
-          </p>
-        ))}
+        <button
+          onClick={(e) => {
+            e.target.nextSibling.style.visibility = "visible";
+            e.target.style.visibility = "hidden";
+          }}
+        >
+          {formData[0].value}
+        </button>
+        <div
+          style={{
+            visibility: "hidden",
+          }}
+        >
+          {formData.map((item) => (
+            <div key={item.label}>
+              <label>{item.label}</label>
+              <input value={item.value || ""}></input>
+            </div>
+          ))}
+          <button
+            onClick={(e) => {
+              e.target.parentNod.nextSibling.style.visibility = "visible";
+              e.target.style.visibility = "hidden";
+            }}
+          >
+            Save
+          </button>
+        </div>
       </div>,
     ]);
 
-    // Clear the form fields after adding data (optional)
     props.detailList.forEach((detail) => {
       const inputElement = document.querySelector(
         `input[name="${detail.label}"]`,
@@ -58,8 +76,13 @@ export default function Section(props) {
       <h2>{props.title}</h2>
       <div style={{ visibility: props.active ? "visible" : "hidden" }}>
         {sectionData.map((section) => (
-          <div key={section.key}>
-            {section.children} {/* Render the children (formData) */}
+          <div
+            key={section.key}
+            style={{
+              visibility: !formActive && props.active ? "visible" : "hidden",
+            }}
+          >
+            {section}
           </div>
         ))}
         <div
