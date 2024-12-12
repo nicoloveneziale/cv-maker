@@ -2,11 +2,11 @@ import "../styles/GeneralInformation.css";
 import { useState } from "react";
 
 export default function GeneralInformation(props) {
-  const [showForm, setShownForm] = useState(false);
+  const [showForm, setShowForm] = useState(false);
   const [currentData, setCurrentData] = useState({});
 
   function toggleShowForm() {
-    setShownForm(!showForm);
+    setShowForm(!showForm);
   }
 
   function handleInput(e) {

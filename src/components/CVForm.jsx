@@ -1,30 +1,55 @@
 import "../styles/CVForm.css";
 
-export default function CVForm(generalInformationData) {
-  console.log(generalInformationData);
+export default function CVForm(props) {
+  console.log(props);
   return (
     <div id="cb-form">
       <div id="general-information">
         <h2>
-          {generalInformationData.generalInformationData
-            ? generalInformationData.generalInformationData.fullName
+          {props.generalInformationData
+            ? props.generalInformationData.fullName
             : ""}
           <div id="contacts">
             <p>
-              {generalInformationData.generalInformationData
-                ? generalInformationData.generalInformationData.email
+              {props.generalInformationData
+                ? props.generalInformationData.email
                 : ""}
             </p>
             <p>
-              {generalInformationData.generalInformationData
-                ? generalInformationData.generalInformationData.tel
+              {props.generalInformationData
+                ? props.generalInformationData.tel
                 : ""}
             </p>
             <p>
-              {generalInformationData.generalInformationData
-                ? generalInformationData.generalInformationData.location
+              {props.generalInformationData
+                ? props.generalInformationData.location
                 : ""}
             </p>
+          </div>
+          <div>
+            <h4
+              style={{
+                visibility:
+                  props.educationExperienceData.length > 0
+                    ? "visible"
+                    : "hidden",
+              }}
+            >
+              Education
+            </h4>
+            {props.educationExperienceData.map((education) => (
+              <div key={education.studyName} className="education-cv">
+                <p>
+                  {education.studyName}, {education.school}
+                </p>
+                <p>
+                  {education.startDate} - {education.endDate}
+                </p>
+                <p>
+                  {education.city}, {education.country}
+                </p>
+              </div>
+            ))}
           </div>
         </h2>
       </div>

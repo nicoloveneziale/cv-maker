@@ -1,4 +1,4 @@
-import { useState, useSyncExternalStore } from "react";
+import { useState } from "react";
 import "./App.css";
 import GeneralInformation from "./components/GeneralInformation.jsx";
 import EducationalExperience from "./components/EducationExperience.jsx";
@@ -6,8 +6,7 @@ import CVForm from "./components/CVForm.jsx";
 
 function App() {
   const [generalInformationData, setGeneralInformationData] = useState(null);
-  const [educationExperienceData, setEducationalExperienceData] =
-    useState(null);
+  const [educationExperienceData, setEducationalExperienceData] = useState([]);
 
   return (
     <>
@@ -20,7 +19,10 @@ function App() {
           currentCvData={educationExperienceData}
         ></EducationalExperience>
       </div>
-      <CVForm generalInformationData={generalInformationData}></CVForm>
+      <CVForm
+        generalInformationData={generalInformationData}
+        educationExperienceData={educationExperienceData}
+      ></CVForm>
     </>
   );
 }
