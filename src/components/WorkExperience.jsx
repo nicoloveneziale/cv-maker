@@ -86,8 +86,7 @@ export default function WorkExperience(props) {
           value={currentData.endDate || ""}
         />
         <label htmlFor="description">Description</label>
-        <input
-          type="text"
+        <textarea
           name="description"
           onInput={handleInput}
           value={currentData.description || ""}
@@ -119,7 +118,7 @@ export default function WorkExperience(props) {
       <div id="component">
         <div id="title-area">
           <h1>Work Experience</h1>
-          <button onClick={toggleShowForm}>Open Img</button>
+          <button onClick={toggleShowForm}>+</button>
         </div>
         {props.currentCvData.map((work, index) => (
           <div
@@ -130,7 +129,7 @@ export default function WorkExperience(props) {
             className="saved-section"
           >
             <div className="description-section">
-              <p>{work.jobTitle}</p>
+              <p style={{ fontWeight: 900 }}>{work.jobTitle}</p>
               <p>{work.company}</p>
               <p>
                 {work.startDate} - {work.endDate}

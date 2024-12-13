@@ -46,6 +46,17 @@
   border-radius: 0.5rem;
 }
 
+textarea {
+  resize: none;
+  width: 100%;
+  background-color: #0707077c;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.7vw;
+  height: 12rem;
+  margin: 3vh;
+}
+
 #button-div {
   display: flex;
   align-items: center;

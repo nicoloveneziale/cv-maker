@@ -128,7 +128,7 @@ export default function GeneralInformation(props) {
       <div id="component">
         <div id="title-area">
           <h1>Educational Experience</h1>
-          <button onClick={toggleShowForm}>Open Img</button>
+          <button onClick={toggleShowForm}>{showForm ? "-" : "+"}</button>
         </div>
         {props.currentCvData.map((education, index) => (
           <div
@@ -139,7 +139,7 @@ export default function GeneralInformation(props) {
             className="saved-section"
           >
             <div className="description-section">
-              <p>{education.studyName}</p>
+              <p style={{ fontWeight: 900 }}>{education.studyName}</p>
               <p>{education.school}</p>
               <p>
                 {education.city}, {education.country}

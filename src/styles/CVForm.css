@@ -1,0 +1,77 @@
+#cv-form {
+  background-color: rgb(226, 219, 219);
+  height: 100%;
+  width: 100%;
+  padding: 3vh 1vw 3vh 1vw;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+#contacts {
+  display: flex;
+  justify-content: center;
+}
+
+#contacts p {
+  margin: 0 2vw 0 2vw;
+  font-size: 1.2rem;
+  padding-bottom: 2px;
+  border-bottom: solid #1b1919 2px;
+}
+
+h4 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  width: 90%;
+  display: flex;
+  padding-left: 5%;
+  margin-left: 2.5%;
+  border-bottom: solid 3px #1b1919;
+  padding-bottom: 1vh;
+}
+
+.education-cv {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin: -2vh 2vw 0 2vw;
+}
+
+.ed-title {
+  font-weight: 900;
+}
+
+.education-details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vh;
+}
+
+.education-details p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.work-title {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin: -2vw 2vw 0 2vw;
+}
+
+.job-title {
+  font-weight: 900;
+}
+
+.work-description {
+  width: 90%;
+  height: auto;
+  border: none;
+  background: none;
+  color: #1b1919;
+  line-height: 1.2vw;
+  margin: 0;
+  font-size: 1rem;
+}
