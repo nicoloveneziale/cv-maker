@@ -51,6 +51,27 @@ export default function CVForm(props) {
               </div>
             ))}
           </div>
+          <div>
+            <h4
+              style={{
+                visibility:
+                  props.workExperienceData.length > 0 ? "visible" : "hidden",
+              }}
+            >
+              Work Experience
+            </h4>
+            {props.workExperienceData.map((work) => (
+              <div key={work.jobTitle} className="work-cv">
+                <p>
+                  {work.jobTitle}, {work.company}
+                </p>
+                <p>
+                  {work.startDate} - {work.endDate}
+                </p>
+                <p>{work.description}</p>
+              </div>
+            ))}
+          </div>
         </h2>
       </div>
     </div>

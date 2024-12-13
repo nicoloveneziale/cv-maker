@@ -2,14 +2,16 @@ import { useState } from "react";
 import "./App.css";
 import GeneralInformation from "./components/GeneralInformation.jsx";
 import EducationalExperience from "./components/EducationExperience.jsx";
+import WorkExperience from "./components/WorkExperience.jsx";
 import CVForm from "./components/CVForm.jsx";
 
 function App() {
   const [generalInformationData, setGeneralInformationData] = useState(null);
   const [educationExperienceData, setEducationalExperienceData] = useState([]);
+  const [workExperienceData, setWorkExperienceData] = useState([]);
 
   return (
-    <>
+    <div id="main">
       <div id="details">
         <GeneralInformation
           setData={setGeneralInformationData}
@@ -18,12 +20,19 @@ function App() {
           setData={setEducationalExperienceData}
           currentCvData={educationExperienceData}
         ></EducationalExperience>
+        <WorkExperience
+          setData={setWorkExperienceData}
+          currentCvData={workExperienceData}
+        ></WorkExperience>
       </div>
-      <CVForm
-        generalInformationData={generalInformationData}
-        educationExperienceData={educationExperienceData}
-      ></CVForm>
-    </>
+      <div id="cv-div">
+        <CVForm
+          generalInformationData={generalInformationData}
+          educationExperienceData={educationExperienceData}
+          workExperienceData={workExperienceData}
+        ></CVForm>
+      </div>
+    </div>
   );
 }
 

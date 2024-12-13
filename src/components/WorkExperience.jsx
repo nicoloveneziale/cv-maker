@@ -1,7 +1,7 @@
-import "../styles/EducationExperience.css";
+import "../styles/WorkExperience.css";
 import { useState } from "react";
 
-export default function GeneralInformation(props) {
+export default function WorkExperience(props) {
   const [showForm, setShownForm] = useState(false);
   const [currentData, setCurrentData] = useState({});
   const [currentIndex, setCurrentIndex] = useState(props.currentCvData.length);
@@ -55,37 +55,21 @@ export default function GeneralInformation(props) {
         }}
         className="form"
       >
-        <label htmlFor="studyName">Name of Study</label>
+        <label htmlFor="jobTitle">Job Title</label>
         <input
-          name="studyName"
+          name="jobTitle"
           type="text"
           onInput={handleInput}
-          placeholder="BsC Computer Science"
-          value={currentData.studyName || ""}
+          placeholder="Web Developer"
+          value={currentData.jobTitle || ""}
         />
-        <label htmlFor="school">Place of Study</label>
+        <label htmlFor="company">Company</label>
         <input
-          name="school"
+          name="company"
           type="text"
-          placeholder="University of Liverpool"
+          placeholder="Google"
           onInput={handleInput}
-          value={currentData.school || ""}
-        />
-        <label htmlFor="city">City</label>
-        <input
-          type="name"
-          name="city"
-          placeholder="Liverpool"
-          onInput={handleInput}
-          value={currentData.city || ""}
-        />
-        <label htmlFor="country">Country</label>
-        <input
-          type="country"
-          name="country"
-          placeholder="UK"
-          onInput={handleInput}
-          value={currentData.country || ""}
+          value={currentData.company || ""}
         />
         <label htmlFor="startDate">Start Date</label>
         <input
@@ -100,6 +84,13 @@ export default function GeneralInformation(props) {
           name="endDate"
           onInput={handleInput}
           value={currentData.endDate || ""}
+        />
+        <label htmlFor="description">Description</label>
+        <input
+          type="text"
+          name="description"
+          onInput={handleInput}
+          value={currentData.description || ""}
         />
         <div id="button-div">
           <button id="save-button" onClick={handleSaveData}>
@@ -127,10 +118,10 @@ export default function GeneralInformation(props) {
     <>
       <div id="component">
         <div id="title-area">
-          <h1>Educational Experience</h1>
+          <h1>Work Experience</h1>
           <button onClick={toggleShowForm}>Open Img</button>
         </div>
-        {props.currentCvData.map((education, index) => (
+        {props.currentCvData.map((work, index) => (
           <div
             key={index}
             style={{
@@ -139,13 +130,10 @@ export default function GeneralInformation(props) {
             className="saved-section"
           >
             <div className="description-section">
-              <p>{education.studyName}</p>
-              <p>{education.school}</p>
+              <p>{work.jobTitle}</p>
+              <p>{work.company}</p>
               <p>
-                {education.city}, {education.country}
-              </p>
-              <p>
-                {education.startDate} - {education.endDate}
+                {work.startDate} - {work.endDate}
               </p>
             </div>
             <button

@@ -14,16 +14,18 @@ export default function GeneralInformation(props) {
   }
 
   function handleSaveData() {
+    setShowForm(false);
     props.setData(currentData);
-    console.log(currentData);
   }
 
   return (
     <>
-      <div>
-        <h1>General Information</h1>
-        <button onClick={toggleShowForm}>Open Img</button>
-        <div style={{ visibility: showForm ? "visible" : "hidden" }}>
+      <div id="component">
+        <div id="title-area">
+          <h1>General Information</h1>
+          <button onClick={toggleShowForm}>Open Img</button>
+        </div>
+        <div id="form" style={{ display: showForm ? "flex" : "none" }}>
           <label htmlFor="full-name">Full Name</label>
           <input name="fullName" type="text" onInput={handleInput} />
           <label htmlFor="email">Email</label>

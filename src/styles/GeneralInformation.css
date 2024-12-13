@@ -1,0 +1,45 @@
+#component {
+  background-color: #444444;
+  width: 85%;
+  margin: 1vh;
+  border-radius: 1.5rem;
+}
+
+#title-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#title-area h1 {
+  font-size: 37px;
+}
+
+#form {
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  padding: 2vh;
+}
+
+#form label {
+  font-size: 2rem;
+  font-weight: 500;
+  border-bottom: #b9b9b9 3px solid;
+  width: 70%;
+}
+
+#form input {
+  width: 65%;
+  margin: 1vh;
+  height: 2rem;
+  font-size: 1.7rem;
+  border: none;
+  background-color: #0707077c;
+  border-radius: 0.5rem;
+}
+
+#form button {
+  margin-right: -85%;
+  background-color: #51d8137c;
+}
