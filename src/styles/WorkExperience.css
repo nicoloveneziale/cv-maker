@@ -1,13 +1,18 @@
 #component {
-  background-color: #444444;
+  background-color: #fcf9f9;
   width: 85%;
-  margin: 1vh;
-  padding: 1vh 0 2vh 0;
-  border-radius: 1.5rem;
+  margin: 2vh;
+  padding: 1vh 0 2vh 1vw;
+  border-radius: 0.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
+  box-shadow: #333333bb 0px 1px 15px;
+}
+
+* {
+  color: #363636;
 }
 
 #title-area {
@@ -19,7 +24,12 @@
 }
 
 #title-area h1 {
-  font-size: 37px;
+  font-size: 2rem;
+}
+
+#title-area button {
+  background-color: #aabee2;
+  box-shadow: #212222 0px 1px 5px;
 }
 
 .form {
@@ -42,19 +52,21 @@
   height: 2rem;
   font-size: 1.7rem;
   border: none;
-  background-color: #0707077c;
+  background-color: #ffffff;
   border-radius: 0.5rem;
+  box-shadow: #212222 0px 1px 5px;
 }
 
 textarea {
   resize: none;
   width: 100%;
-  background-color: #0707077c;
+  background-color: #ffffff;
   border: none;
   border-radius: 0.5rem;
   padding: 0.7vw;
   height: 12rem;
   margin: 3vh;
+  box-shadow: #212222 0px 1px 5px;
 }
 
 #button-div {
@@ -66,15 +78,19 @@ textarea {
 .form #save-button {
   background-color: #51d8137c;
   margin: 0.5vw;
+  box-shadow: #212222 0px 1px 5px;
 }
 
 .form #cancel-button {
   margin: 0.5vw;
+  background-color: #979797;
+  box-shadow: #212222 0px 1px 5px;
 }
 
 .form #delete-button {
   margin: 0.5vw;
   background-color: #ec44447c;
+  box-shadow: #212222 0px 1px 5px;
 }
 
 .saved-section {
@@ -82,7 +98,8 @@ textarea {
   width: 90%;
   align-items: stretch;
   justify-content: center;
-  background-color: #333333;
+  background-color: #fdfdfd;
+  box-shadow: #212222 0px 0px 7px;
   margin: 0.5vh 0 0.5vh 0;
   border-radius: 1rem;
 }
@@ -104,4 +121,5 @@ textarea {
 
 .saved-section button {
   width: 15%;
+  background-color: #aabee2;
 }

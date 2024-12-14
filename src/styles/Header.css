@@ -1,0 +1,21 @@
+header {
+  height: 9.7vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #f7f7fa;
+  border-bottom: rgb(148, 148, 148) 0.3vh solid;
+  box-shadow: #111111 0px 1px 15px;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 21vw;
+}
+
+header div h1 {
+  font-weight: 900;
+  font-size: 3rem;
+}

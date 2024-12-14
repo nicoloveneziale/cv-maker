@@ -62,6 +62,7 @@ export default function GeneralInformation(props) {
           onInput={handleInput}
           placeholder="BsC Computer Science"
           value={currentData.studyName || ""}
+          required
         />
         <label htmlFor="school">Place of Study</label>
         <input
@@ -70,6 +71,7 @@ export default function GeneralInformation(props) {
           placeholder="University of Liverpool"
           onInput={handleInput}
           value={currentData.school || ""}
+          required
         />
         <label htmlFor="city">City</label>
         <input
@@ -78,6 +80,7 @@ export default function GeneralInformation(props) {
           placeholder="Liverpool"
           onInput={handleInput}
           value={currentData.city || ""}
+          required
         />
         <label htmlFor="country">Country</label>
         <input
@@ -86,20 +89,23 @@ export default function GeneralInformation(props) {
           placeholder="UK"
           onInput={handleInput}
           value={currentData.country || ""}
+          required
         />
         <label htmlFor="startDate">Start Date</label>
         <input
-          type="date"
+          type="month"
           name="startDate"
           onInput={handleInput}
           value={currentData.startDate || ""}
+          required
         />
         <label htmlFor="endDate">End Date</label>
         <input
-          type="date"
+          type="month"
           name="endDate"
           onInput={handleInput}
           value={currentData.endDate || ""}
+          required
         />
         <div id="button-div">
           <button id="save-button" onClick={handleSaveData}>

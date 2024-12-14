@@ -1,8 +1,9 @@
 #cv-form {
-  background-color: rgb(226, 219, 219);
+  background-color: rgb(247, 243, 243);
   height: 100%;
   width: 100%;
   padding: 3vh 1vw 3vh 1vw;
+  box-shadow: #1b1919 0px 1px 25px;
 }
 
 h2 {

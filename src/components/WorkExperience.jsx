@@ -118,7 +118,7 @@ export default function WorkExperience(props) {
       <div id="component">
         <div id="title-area">
           <h1>Work Experience</h1>
-          <button onClick={toggleShowForm}>+</button>
+          <button onClick={toggleShowForm}>{showForm ? "-" : "+"}</button>
         </div>
         {props.currentCvData.map((work, index) => (
           <div

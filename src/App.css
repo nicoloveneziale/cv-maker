@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  width: 100%;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -7,7 +7,7 @@
 
 #main {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: space-around;
   align-items: start;
@@ -15,8 +15,7 @@
 
 #details {
   width: 38vw;
-  height: 96vh;
-  margin-top: 4vh;
+  height: 86vh;
   border-radius: 1rem;
   overflow-y: scroll;
   display: flex;
@@ -30,8 +29,8 @@
 }
 
 #cv-div {
-  width: 40vw;
-  height: 87vh;
+  width: 35vw;
+  height: 77vh;
   margin: 1.5vw 2vw 1.5vh;
   background-color: #313131;
   color: #1b1919;

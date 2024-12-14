@@ -23,7 +23,7 @@ export default function GeneralInformation(props) {
       <div id="component">
         <div id="title-area">
           <h1>General Information</h1>
-          <button onClick={toggleShowForm}>+</button>
+          <button onClick={toggleShowForm}>{showForm ? "-" : "+"}</button>
         </div>
         <div id="form" style={{ display: showForm ? "flex" : "none" }}>
           <label htmlFor="full-name">Full Name</label>
