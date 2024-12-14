@@ -71,9 +71,11 @@ export default function CVForm(props) {
                   {work.startDate} - {work.endDate}
                 </p>
               </div>
-              <textarea className="work-description" disabled>
-                {work.description}
-              </textarea>
+              <textarea
+                className="work-description"
+                value={work.description}
+                disabled
+              ></textarea>
             </div>
           ))}
         </div>
