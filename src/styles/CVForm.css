@@ -1,13 +1,13 @@
 #cv-form {
-  background-color: rgb(247, 243, 243);
-  height: 100%;
-  width: 100%;
+  background-color: rgb(255, 255, 255);
+  width: 54.57vh;
+  height: 77vh;
   padding: 3vh 1vw 3vh 1vw;
   box-shadow: #1b1919 0px 1px 25px;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 #contacts {
@@ -16,14 +16,14 @@ h2 {
 }
 
 #contacts p {
-  margin: 0 2vw 0 2vw;
-  font-size: 1.2rem;
+  margin: 0 2% 0 2%;
+  font-size: 1rem;
   padding-bottom: 2px;
   border-bottom: solid #1b1919 2px;
 }
 
 h4 {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 900;
   width: 90%;
   display: flex;
@@ -37,7 +37,8 @@ h4 {
   display: flex;
   align-items: start;
   justify-content: space-between;
-  margin: -2vh 2vw 0 2vw;
+  margin: -2vh 1vw 0 2vw;
+  font-size: 0.8rem;
 }
 
 .ed-title {
@@ -59,7 +60,8 @@ h4 {
   display: flex;
   align-items: start;
   justify-content: space-between;
-  margin: -2vw 2vw 0 2vw;
+  margin: -1vw 1vw 0 2vw;
+  font-size: 0.8rem;
 }
 
 .job-title {
@@ -67,12 +69,16 @@ h4 {
 }
 
 .work-description {
-  width: 90%;
-  height: auto;
+  width: 80%;
   border: none;
   background: none;
   color: #1b1919;
   line-height: 1.2vw;
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  overflow: hidden;
+}
+
+#cv-form textarea {
+  box-shadow: none;
 }

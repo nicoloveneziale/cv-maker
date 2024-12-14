@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   text-align: center;
+  overflow: hidden;
 }
 
 #main {
@@ -15,7 +16,7 @@
 
 #details {
   width: 38vw;
-  height: 86vh;
+  height: 90vh;
   border-radius: 1rem;
   overflow-y: scroll;
   display: flex;
@@ -29,9 +30,9 @@
 }
 
 #cv-div {
-  width: 35vw;
+  width: 54.57vh;
   height: 77vh;
   margin: 1.5vw 2vw 1.5vh;
-  background-color: #313131;
+  background-color: #ffffff;
   color: #1b1919;
 }
